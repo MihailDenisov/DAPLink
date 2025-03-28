@@ -36,7 +36,7 @@
 #include DAPLINK_MAIN_HEADER
 #include "uart.h"
 #include "settings.h"
-#include "target_family.h"
+//#include "target_family.h"
 #include "flash_manager.h"
 #include "util.h"
 #include <string.h>
