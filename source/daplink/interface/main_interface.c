@@ -133,10 +133,10 @@ static const osTimerAttr_t k_timer_30ms_attr = {
 // USB busy LED state; when TRUE the LED will flash once using 30mS clock tick
 static uint8_t hid_led_usb_activity = 0;
 static uint8_t cdc_led_usb_activity = 0;
-static uint8_t msc_led_usb_activity = 0;
+//static uint8_t msc_led_usb_activity = 0;
 static main_led_state_t hid_led_state = MAIN_LED_FLASH;
 static main_led_state_t cdc_led_state = MAIN_LED_FLASH;
-static main_led_state_t msc_led_state = MAIN_LED_FLASH;
+//static main_led_state_t msc_led_state = MAIN_LED_FLASH;
 
 // Global state of usb
 main_usb_connect_t usb_state;
@@ -214,12 +214,12 @@ void main_blink_cdc_led(main_led_state_t state)
 }
 
 // Flash MSC LED using 30mS tick
-void main_blink_msc_led(main_led_state_t state)
-{
-    msc_led_usb_activity = 1;
-    msc_led_state = state;
-    return;
-}
+//void main_blink_msc_led(main_led_state_t state)
+//{
+//    msc_led_usb_activity = 1;
+//   msc_led_state = state;
+//    return;
+//}
 
 // Power down the interface
 void main_powerdown_event(void)
@@ -268,7 +268,7 @@ void main_task(void * arg)
     // LED
     gpio_led_state_t hid_led_value = HID_LED_DEF;
     gpio_led_state_t cdc_led_value = CDC_LED_DEF;
-    gpio_led_state_t msc_led_value = MSC_LED_DEF;
+//    gpio_led_state_t msc_led_value = MSC_LED_DEF;
     // USB
     uint32_t usb_state_count = USB_CONNECT_DELAY;
     uint32_t usb_no_config_count = USB_CONFIGURE_TIMEOUT;
@@ -288,16 +288,16 @@ void main_task(void * arg)
     // Turn to LED default settings
     gpio_set_hid_led(hid_led_value);
     gpio_set_cdc_led(cdc_led_value);
-    gpio_set_msc_led(msc_led_value);
+//    gpio_set_msc_led(msc_led_value);
     // Initialize the DAP
     DAP_Setup();
 
     // make sure we have a valid board info structure.
-    util_assert(g_board_info.info_version == kBoardInfoVersion);
+//    util_assert(g_board_info.info_version == kBoardInfoVersion);
 
     // do some init with the target before USB and files are configured
-    if (g_board_info.prerun_board_config) {
-        g_board_info.prerun_board_config();
+//    if (g_board_info.prerun_board_config) {
+//        g_board_info.prerun_board_config();
     }
 
     //initialize the family
