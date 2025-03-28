@@ -144,15 +144,15 @@ uint32_t DAP_ProcessVendorCommand(const uint8_t *request, uint8_t *response) {
         num += (1U << 16) | 1U; // increment request and response count each by 1
         break;
     }
-    case ID_DAP_ResetTargetIfNoAutoReset: {
-        // reset target
-        *response = 1;
-        if (!config_get_auto_rst()) {
-            target_set_state(RESET_RUN);
-        }
-        num += 1;
-        break;
-    }
+//    case ID_DAP_ResetTargetIfNoAutoReset: {
+//        // reset target
+//        *response = 1;
+//        if (!config_get_auto_rst()) {
+//            target_set_state(RESET_RUN);
+//        }
+//        num += 1;
+//        break;
+//    }
 #ifdef DRAG_N_DROP_SUPPORT
     case ID_DAP_MSD_Open: {
         // open mass storage device stream
