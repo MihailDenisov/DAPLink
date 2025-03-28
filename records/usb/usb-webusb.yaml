@@ -1,6 +1,6 @@
 common:
     macros:
-        # - WEBUSB_INTERFACE
+         - WEBUSB_INTERFACE
     sources:
         usb:
             - source/usb/webusb
