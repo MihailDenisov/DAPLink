@@ -12,25 +12,25 @@ module:
         - records/tools/armcc.yaml
         - records/tools/armclang.yaml
         - records/tools/version.yaml
-    bl: &module_bl
-        - *module_tools
-        - records/usb/usb-core.yaml
-        - records/usb/usb-msc.yaml
-        - records/daplink/bootloader.yaml
-        - records/daplink/drag-n-drop.yaml
-        - records/daplink/settings.yaml
-        - records/daplink/settings_rom_stub.yaml
-        - records/daplink/target_board.yaml
-        - records/rtos/rtos-none.yaml
+#    bl: &module_bl
+#        - *module_tools
+#        - records/usb/usb-core.yaml
+#        - records/usb/usb-msc.yaml
+#        - records/daplink/bootloader.yaml
+#        - records/daplink/drag-n-drop.yaml
+#        - records/daplink/settings.yaml
+#        - records/daplink/settings_rom_stub.yaml
+3        - records/daplink/target_board.yaml
+3        - records/rtos/rtos-none.yaml
     if: &module_if
         - *module_tools
         - records/usb/usb-core.yaml
-        - records/usb/usb-msc.yaml
+#        - records/usb/usb-msc.yaml
         - records/usb/usb-cdc.yaml
-        - records/usb/usb-webusb.yaml
+#        - records/usb/usb-webusb.yaml
         - records/usb/usb-winusb.yaml
         - records/daplink/cmsis-dap.yaml
-        - records/daplink/drag-n-drop.yaml
+#        - records/daplink/drag-n-drop.yaml
         - records/daplink/usb2uart.yaml
         - records/daplink/settings.yaml
         - records/daplink/settings_rom.yaml
