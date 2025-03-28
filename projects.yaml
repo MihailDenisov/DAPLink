@@ -20,8 +20,8 @@ module:
 #        - records/daplink/drag-n-drop.yaml
 #        - records/daplink/settings.yaml
 #        - records/daplink/settings_rom_stub.yaml
-3        - records/daplink/target_board.yaml
-3        - records/rtos/rtos-none.yaml
+#         - records/daplink/target_board.yaml
+#         - records/rtos/rtos-none.yaml
     if: &module_if
         - *module_tools
         - records/usb/usb-core.yaml
