@@ -1,6 +1,6 @@
 common:
     macros:
-        # - MSC_ENDPOINT
+         - MSC_ENDPOINT
     sources:
         usb:
             - source/usb/msc
