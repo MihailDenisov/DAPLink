@@ -35,8 +35,8 @@ module:
         - records/daplink/settings.yaml
         - records/daplink/settings_rom.yaml
         - records/daplink/interface.yaml
-#        - records/daplink/target_family.yaml
-#        - records/daplink/target_board.yaml
+        - records/daplink/target_family.yaml
+        - records/daplink/target_board.yaml
     # HICs
     # hic_k20dx: &module_hic_k20dx
         # - records/rtos/rtos-cm3.yaml
