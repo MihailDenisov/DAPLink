@@ -28,7 +28,7 @@
 #include "gpio.h"
 #include "uart.h"
 #include "tasks.h"
-#include "swd_host.h"
+//#include "swd_host.h"
 #include "info.h"
 #include "settings.h"
 #include "daplink.h"
