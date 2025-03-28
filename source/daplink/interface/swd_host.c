@@ -24,10 +24,10 @@
 #ifndef TARGET_MCU_CORTEX_A
 #include "device.h"
 #include "cmsis_os2.h"
-#include "target_config.h"
+//#include "target_config.h"
 #include "DAP_config.h"
 #include "DAP.h"
-#include "target_family.h"
+//#include "target_family.h"
 #include "swd_host.h"
 
 // Default NVIC and Core debug base addresses
