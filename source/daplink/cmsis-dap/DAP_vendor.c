@@ -37,7 +37,7 @@
 #include "uart.h"
 #include "settings.h"
 //#include "target_family.h"
-#include "flash_manager.h"
+//#include "flash_manager.h"
 #include "util.h"
 #include <string.h>
 #include "daplink_vendor_commands.h"
@@ -205,7 +205,7 @@ uint32_t DAP_ProcessVendorCommand(const uint8_t *request, uint8_t *response) {
         break;
     }
 #endif
-    case ID_DAP_SelectEraseMode: {
+//    case ID_DAP_SelectEraseMode: {
         // switching between chip erase and page erase
         //              COMMAND(OUT Packet)
         //              BYTE 0 1000 1110 0x8D
@@ -215,15 +215,16 @@ uint32_t DAP_ProcessVendorCommand(const uint8_t *request, uint8_t *response) {
         //              RESPONSE(IN Packet)
         //              BYTE 0
         //                                              0x00 - OK
-        *response = DAP_OK;
-        if (0x00U == *request) {
-            flash_manager_set_page_erase(false);
-        } else {
-            flash_manager_set_page_erase(true);
-        }
-        num += (1U << 16) | 1U; // increment request and response count each by 1
-        break;
-    }
+ //       *response = DAP_OK;
+ //       if (0x00U == *request) {
+ //           flash_manager_set_page_erase(false);
+ //       } else {
+ //           flash_manager_set_page_erase(true);
+ //       }
+ //       num += (1U << 16) | 1U; // increment request and response count each by 1
+ //       break;
+ //   }
+    case ID_DAP_Vendor13: break;
     case ID_DAP_Vendor14: break;
     case ID_DAP_Vendor15: break;
     case ID_DAP_Vendor16: break;
